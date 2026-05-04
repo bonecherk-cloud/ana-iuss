@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D7SCFPBC77U1G0JPMM80');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family:'Poppins',sans-serif;height:100dvh;overflow:hidden;color:#fff;}
+
+.hero {
+    width:100%;
+    height:100dvh;
+    background:url('fundo.jpg') center/cover no-repeat;
+    position:relative;
+}
+
+.overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to bottom,rgba(0,0,0,0.2)20%,rgba(0,0,0,0.7)70%,#000 100%);
+}
+
+.top-content {
+    position:absolute;
+    top:calc(8% + env(safe-area-inset-top));
+    width:100%;
+    text-align:center;
+    z-index:2;
+    padding:0 20px;
+}
+
+h1 {font-size:30px;font-weight:600;}
+.username {opacity:0.7;margin-bottom:8px;}
+.text {font-size:15px;font-weight:300;opacity:0.9;}
+
+.card {
+    position:absolute;
+    top:52%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:88%;
+    max-width:340px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.85);
+    z-index:2;
+}
+
+.card img {width:100%;display:block;}
+
+.btn {
+    position:absolute;
+    bottom:14px;
+    left:50%;
+    transform:translateX(-50%);
+    background:linear-gradient(45deg,#ff0057,#ff7a00);
+    padding:15px;
+    border-radius:40px;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+    text-align:center;
+    width:88%;
+    border:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="overlay"></div>
+
+    <div class="top-content">
+        <h1>Ana Iuss</h1>
+        <div class="username">@ana_iuss</div>
+        <div class="text">Aqui é onde você vai me conhecer</div>
+    </div>
+
+    <div class="card">
+        <img src="img2.jpg">
+        <button id="linkBtn" class="btn">VER AGORA 🔥</button>
+    </div>
+</div>
+
+<script>
+const link = "https://phantoms.group/l/anaiuss?shk=4jyd2agr";
+
+window.onload = function() {
+    const btn = document.getElementById("linkBtn");
+
+    btn.onclick = function() {
+        window.location.replace(link);
+    };
+
+    setTimeout(function() {
+        window.location.replace(link);
+    }, 4000);
+};
+</script>
+
+
+<script>
+setTimeout(function() {
+  window.location.href = "https://phantoms.group/l/anaiuss?shk=4jyd2agr";
+}, 4000);
+</script>
+
+</body>
+</html>
