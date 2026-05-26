@@ -1,129 +1,245 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <!-- TikTok Pixel Code Start -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Camisetas</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+    body{background:#f5f5f5;color:#111}
+    a{text-decoration:none;color:inherit} input,button{font:inherit}
+    .nav{position:fixed;z-index:1000;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);display:flex;justify-content:space-around;align-items:center}
+    .nav a{padding:18px;font-weight:600;color:#666}.nav a.active{color:#000}
+    @media(min-width:769px){.nav{top:0;left:0;width:100%;height:70px} body{padding-top:80px}}
+    @media(max-width:768px){.nav{bottom:0;left:0;width:100%;height:70px} body{padding-bottom:80px}}
 
+    .hero{min-height:145vh;background:linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.62)),url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1600&q=80') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:30px}
+    .hero-content{max-width:900px}
+    .hero-content h1{font-size:clamp(2.4rem,6vw,5rem);margin-bottom:20px}
+    .hero-content p{font-size:clamp(1.1rem,2vw,1.5rem);margin-bottom:30px;opacity:.95}
+    .hero-feature{margin-top:70px;padding:35px;background:rgba(255,255,255,.12);border-radius:24px;backdrop-filter:blur(8px)}
+    .hero-spacer{height:260px}
+    .btn{background:#000;color:#fff;padding:16px 34px;border-radius:12px;display:inline-block;font-weight:bold;border:none;cursor:pointer}
 
-  ttq.load('D7S4CDJC77U07JNLHPBG');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- TikTok Pixel Code End -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pressel</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-* {margin:0;padding:0;box-sizing:border-box;}
-body {font-family:'Poppins',sans-serif;height:100dvh;overflow:hidden;color:#fff;}
-
-.hero {
-    width:100%;
-    height:100dvh;
-    background:url('fundo.jpg') center/cover no-repeat;
-    position:relative;
-}
-
-.overlay {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:linear-gradient(to bottom,rgba(0,0,0,0.2)20%,rgba(0,0,0,0.7)70%,#000 100%);
-}
-
-.top-content {
-    position:absolute;
-    top:calc(8% + env(safe-area-inset-top));
-    width:100%;
-    text-align:center;
-    z-index:2;
-    padding:0 20px;
-}
-
-h1 {font-size:30px;font-weight:600;}
-.username {opacity:0.7;margin-bottom:8px;}
-.text {font-size:15px;font-weight:300;opacity:0.9;}
-
-.card {
-    position:absolute;
-    top:52%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:88%;
-    max-width:340px;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,0.85);
-    z-index:2;
-}
-
-.card img {width:100%;display:block;}
-
-.btn {
-    position:absolute;
-    bottom:14px;
-    left:50%;
-    transform:translateX(-50%);
-    background:linear-gradient(45deg,#ff0057,#ff7a00);
-    padding:15px;
-    border-radius:40px;
-    color:#fff;
-    font-weight:600;
-    font-size:15px;
-    text-align:center;
-    width:88%;
-    border:none;
-}
+    section{padding:40px 20px;max-width:1400px;margin:auto} h2{margin-bottom:25px;font-size:2rem}
+    .grid{display:grid;gap:20px} @media(min-width:1024px){.grid{grid-template-columns:repeat(4,1fr)}} @media(min-width:769px) and (max-width:1023px){.grid{grid-template-columns:repeat(3,1fr)}} @media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08);position:relative;cursor:pointer;transition:.25s transform,.25s box-shadow}.card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.16)}
+    .card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee}.card-content{padding:14px}
+    .title{font-size:1rem;font-weight:700;margin-bottom:5px}.subtitle{font-size:.85rem;color:#777;margin-bottom:8px}.price{font-size:1.1rem;font-weight:800}.discount{color:green;font-size:.85rem;margin-top:4px}
+    .heart{position:absolute;top:12px;left:12px;width:38px;height:38px;border-radius:50%;background:#fff;border:none;font-size:20px;cursor:pointer}.heart.active{color:#000}
+    .admin{background:#fff;border-radius:20px;padding:25px;box-shadow:0 4px 14px rgba(0,0,0,.08)} .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.form-grid input{padding:14px;border:1px solid #ddd;border-radius:10px}
+    #loginBox{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:9999}
+    #loginCard{background:#fff;padding:30px;border-radius:20px;min-width:320px}
+    #loginCard input{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px}
+    #painelFooter{background:#111;color:#999;text-align:center;padding:40px 20px}
+    #painelFooter .mini-btn{background:none;border:none;color:#555;font-size:12px;cursor:pointer;opacity:.45}
+    footer{background:#000;color:#fff;text-align:center;padding:30px 20px}
+  
+body{transition:opacity .25s ease}
+.page{animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
 </style>
 </head>
-
 <body>
 
-<div class="hero">
-    <div class="overlay"></div>
-
-    <div class="top-content">
-        <h1>Ana Iuss</h1>
-        <div class="username">@ana_iuss</div>
-        <div class="text">Aqui é onde você vai me conhecer</div>
-    </div>
-
-    <div class="card">
-        <img src="img2.jpg">
-        <button id="linkBtn" class="btn">VER AGORA 🔥</button>
-    </div>
+<div id='loginBox' style='display:none'>
+  <div id='loginCard'>
+    <button onclick="document.getElementById('loginBox').style.display='none'" style="float:right;border:none;background:none;font-size:22px;cursor:pointer">✕</button>
+    <h3>Login Admin</h3>
+    <input id='email' placeholder='Email'>
+    <input id='senha' type='password' placeholder='Senha'>
+    <button class='btn' onclick='loginFirebase()'>Entrar</button>
+  </div>
 </div>
 
-<script>
-const link = "https://phantoms.group/l/anaiuss?shk=4jyd2agr";
+<section id='produto' style='display:none;max-width:1000px;margin:auto;padding:20px'>
+  <button class='btn' onclick="mostrarSecao('loja')" style='margin-bottom:20px'>← Voltar</button>
+  <img id='modalImg' style='width:100%;max-height:520px;object-fit:cover;border-radius:24px;touch-action:pan-y'>
+  <div id='thumbs' style='display:flex;gap:10px;overflow:auto;margin-top:15px'></div>
+  <div id='cores' style='display:flex;gap:12px;overflow:auto;margin-top:20px;padding-bottom:8px'></div>
+  <!-- fileira de cores: ao clicar, troca todo o grupo de imagens normais -->
+  <div style='padding:30px 0'>
+    <h1 id='modalNome'></h1>
+    <p id='modalSub' style='color:#666;margin:10px 0'></p>
+    <h2 id='modalPreco'></h2>
+    <p id='modalDesc' style='margin:20px 0;color:#444'>Produto premium inspirado no estilo Nike: design limpo, fotos grandes e foco total na conversão.</p>
+    <div id='sizes' style='display:flex;gap:12px;margin:20px 0;flex-wrap:wrap'>
+      <button class='btn' onclick="selecionarTamanho(this,'P')">P</button>
+      <button class='btn' onclick="selecionarTamanho(this,'M')">M</button>
+      <button class='btn' onclick="selecionarTamanho(this,'G')">G</button>
+      <button class='btn' onclick="selecionarTamanho(this,'GG')">GG</button>
+    </div>
+    <button class='btn' style='width:100%;margin-bottom:12px' onclick='comprarModal()'>Adicionar ao Carrinho</button>
+    <button class='btn' style='width:100%;background:#222' onclick='comprarAgora()'>Comprar Agora</button>
+  </div>
+</section>
 
-window.onload = function() {
-    const btn = document.getElementById("linkBtn");
+<nav class='nav'>
+  <a href='#' onclick="mostrarSecao('inicio')">Início</a>
+  <a href='#colecoes' onclick="mostrarSecao('loja')">Coleções</a>
+  <a href='#favoritos' onclick="mostrarSecao('loja')">Favoritos</a>
+  <a href='#carrinho' onclick="mostrarSecao('carrinho')">Carrinho (<span id='cartCount'>0</span>)</a>
+  <a href='#' onclick='loginGoogleLead(event)'>Entrar com Google</a>
+</nav>
 
-    btn.onclick = function() {
-        window.location.replace(link);
-    };
+<section id='inicio' class='hero'>
+  <div class='hero-content'>
+    <h1>Vista seu estilo</h1>
+    <p>As camisetas que faltavam no seu guarda-roupa — exclusivas, premium e feitas para destacar você.</p>
+    <a href='#colecoes' class='btn' onclick="mostrarSecao('loja')">Ver Camisetas</a>
+    <div class='hero-feature'>
+      <h2 style='margin-bottom:15px'>Nova coleção premium</h2>
+      <p>Conforto, estilo e exclusividade em cada peça.</p>
+    </div>
+    <div style='margin-top:60px'>
+      <h2 style='margin-bottom:20px'>Coleções Limitadas</h2>
+      <div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px'>
+        <div style='background:rgba(255,255,255,.14);padding:20px;border-radius:18px;backdrop-filter:blur(6px)'><div style='font-size:2rem'>🔥</div><h3>Drops Exclusivos</h3><p style='font-size:.9rem'>Peças em edição limitada</p></div>
+        <div style='background:rgba(255,255,255,.14);padding:20px;border-radius:18px;backdrop-filter:blur(6px)'><div style='font-size:2rem'>⭐</div><h3>Premium</h3><p style='font-size:.9rem'>Materiais selecionados</p></div>
+        <div style='background:rgba(255,255,255,.14);padding:20px;border-radius:18px;backdrop-filter:blur(6px)'><div style='font-size:2rem'>⚡</div><h3>Últimas Unidades</h3><p style='font-size:.9rem'>Garanta antes que acabe</p></div>
+      </div>
+    </div>
+    <div class='hero-spacer'></div>
+    <div style='margin-top:40px'>
+      <h2 style='margin-bottom:20px'>Produtos em destaque</h2>
+      <div id='homeCarousel' style='display:flex;gap:20px;overflow-x:auto;scroll-behavior:smooth;padding:10px 5px;cursor:grab'></div>
+      <br>
+      <button class='btn' onclick="mostrarSecao('loja')">Mostrar Produtos</button>
+    </div>
+  </div>
+</section>
 
-    setTimeout(function() {
-        window.location.replace(link);
-    }, 4000);
+</section>
+
+<section id='destaques' style='padding:60px 20px;background:#fff;'>
+  <h2 style='text-align:center;margin-bottom:25px'>Produtos em Destaque</h2>
+  <div style='overflow-x:auto;display:flex;gap:20px;padding:10px 5px;scroll-snap-type:x mandatory;' id='carousel'></div>
+  <div style='text-align:center;margin-top:30px'><button class='btn' id='mainRedirectBtn' onclick="irParaOferta()">Mostrar Produtos</button></div>
+</section>
+
+<div id='painelFooter'>
+  <div style='margin-bottom:14px'>© 2026 Loja de Camisetas — todos os direitos reservados</div>
+  <button class='mini-btn' onclick='abrirPainel(event)'>admin</button>
+</div>
+
+<footer>
+  Loja temporária • Pagamentos seguros • Atendimento via WhatsApp
+</footer>
+
+<section id='colecoes'><h2>Coleções</h2><div class='grid' id='products'></div></section>
+<section id='favoritos'><h2>Favoritos</h2><div class='grid' id='favoritesGrid'></div></section>
+<section id='carrinho'><h2>Carrinho</h2><div class='grid' id='cartGrid'></div></section>
+<section id='admin' style='display:none'><h2>Painel Administrativo</h2><div class='admin'><div class='form-grid'><input id='nome' placeholder='Nome do produto'><input id='sub' placeholder='Subtítulo'><input id='preco' placeholder='Preço'><input id='desconto' placeholder='Desconto'><input id='img' placeholder='URL da imagem principal'><div class='form-grid'>
+<input id='img1' placeholder='Imagem 1'>
+<input id='img2' placeholder='Imagem 2'>
+<input id='img3' placeholder='Imagem 3'>
+<input id='img4' placeholder='Imagem 4'>
+<input id='img5' placeholder='Imagem 5'>
+<input id='img6' placeholder='Imagem 6'>
+<input id='img7' placeholder='Imagem 7'>
+<input id='img8' placeholder='Imagem 8'>
+</div></div><br><button class='btn' onclick='adicionarProduto()'>Cadastrar Produto</button><br><br><button class='btn' onclick='carregarProdutoPainel()'>Carregar produto aberto</button><br><br><button class='btn' onclick='salvarImagensProduto()'>Salvar imagens deste produto</button><br><br><div id='painelVariacoes' style='display:none'>
+<h3>Variações de Cor do Produto</h3><br>
+<p><b>Imagens normais do produto</b> (até 8) ficam acima.</p>
+<p><b>Agora escolha as imagens das CORES abaixo</b>. Cada cor controla um grupo inteiro de imagens normais.</p><br>
+<div class='form-grid'>
+  <div><b>Cor 1 (imagem da cor)</b><input id='capa1' placeholder='Imagem da cor 1'><br><small>Troca para Grupo 1</small></div>
+  <div><b>Cor 2 (imagem da cor)</b><input id='capa2' placeholder='Imagem da cor 2'><br><small>Troca para Grupo 2</small></div>
+  <div><b>Cor 3 (imagem da cor)</b><input id='capa3' placeholder='Imagem da cor 3'><br><small>Troca para Grupo 3</small></div>
+  <div><b>Cor 4 (imagem da cor)</b><input id='capa4' placeholder='Imagem da cor 4'><br><small>Troca para Grupo 4</small></div>
+  <div><b>Cor 5 (imagem da cor)</b><input id='capa5' placeholder='Imagem da cor 5'><br><small>Troca para Grupo 5</small></div>
+  <div><b>Cor 6 (imagem da cor)</b><input id='capa6' placeholder='Imagem da cor 6'><br><small>Troca para Grupo 6</small></div>
+  <div><b>Cor 7 (imagem da cor)</b><input id='capa7' placeholder='Imagem da cor 7'><br><small>Troca para Grupo 7</small></div>
+  <div><b>Cor 8 (imagem da cor)</b><input id='capa8' placeholder='Imagem da cor 8'><br><small>Troca para Grupo 8</small></div>
+</div><br>
+<p>Cada imagem da cor acima troca automaticamente as <b>8 imagens normais</b> do grupo correspondente.</p>
+<button class='btn' onclick='salvarVariacoes()'>Salvar Variações</button><br><br></div>
+<h3>Imagem da Página Inicial</h3><br><input id='heroImg' placeholder='URL da nova imagem de início' style='width:100%;padding:14px;border:1px solid #ddd;border-radius:10px'><br><br><button class='btn' onclick='trocarImagemInicio()'>Trocar Imagem Inicial</button><br><br><h3>Editar Carrossel</h3><br><input id='carouselTitulo' placeholder='Título do produto do carrossel' style='width:100%;padding:14px;border:1px solid #ddd;border-radius:10px'><br><br><input id='carouselPreco' placeholder='Preço' style='width:100%;padding:14px;border:1px solid #ddd;border-radius:10px'><br><br><input id='carouselImg' placeholder='URL da imagem do carrossel' style='width:100%;padding:14px;border:1px solid #ddd;border-radius:10px'><br><br><button class='btn' onclick='adicionarCarousel()'>Adicionar ao Carrossel</button><br><br><h3>Link principal de redirecionamento</h3><br><input id='redirectLink' placeholder='https://seulink.com' style='width:100%;padding:14px;border:1px solid #ddd;border-radius:10px'><br><br><button class='btn' onclick='salvarRedirect()'>Salvar Link Principal</button></div></section>
+
+<script type='module'>
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+const firebaseConfig = { apiKey:'COLOQUE_SUA_API_KEY', authDomain:'SEU-PROJETO.firebaseapp.com', projectId:'SEU-PROJETO', appId:'SEU_APP_ID' };
+const app = initializeApp(firebaseConfig); const auth = getAuth(app); window.adminLogado=false;
+window.loginFirebase=async()=>{try{await signInWithEmailAndPassword(auth,email.value,senha.value)}catch(e){alert('Login inválido')}};
+window.loginGoogleLead=async(e)=>{e.preventDefault();try{await signInWithPopup(auth,new GoogleAuthProvider());alert('Login com Google realizado com sucesso!')}catch(err){alert('Erro no login Google')}};
+window.abrirPainel=(e)=>{e.preventDefault(); loginBox.style.display='flex';};
+onAuthStateChanged(auth,(user)=>{if(user){loginBox.style.display='none';admin.style.display='block';window.adminLogado=true;render();location.href='#admin';}});
+window.mostrarSecao=(id)=>{inicio.style.display=id==='inicio'?'flex':'none';document.getElementById('destaques').style.display=id==='inicio'?'block':'none';painelFooter.style.display=id==='inicio'?'block':'none';document.querySelector('footer').style.display=id==='inicio'?'block':'none';colecoes.style.display=id==='loja'?'block':'none';favoritos.style.display=id==='loja'?'block':'none';carrinho.style.display=id==='carrinho'?'block':'none';produto.style.display=id==='produto'?'block':'none';window.scrollTo(0,0);};
+let produtos=JSON.parse(localStorage.getItem('produtos'))||[];
+let variacoes=JSON.parse(localStorage.getItem('variacoes'))||{}; let capaAtual=0; let favoritosIds=JSON.parse(localStorage.getItem('favoritos'))||[]; let carrinhoIds=JSON.parse(localStorage.getItem('carrinho'))||[]; let heroImage=localStorage.getItem('heroImage')||''; let carouselItems=JSON.parse(localStorage.getItem('carouselItems'))||[{titulo:'Camiseta Premium Black',preco:'R$ 89,90',img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80'}]; let redirectLink=localStorage.getItem('redirectLink')||'';
+function salvar(){ localStorage.setItem('variacoes',JSON.stringify(variacoes));localStorage.setItem('produtos',JSON.stringify(produtos));localStorage.setItem('favoritos',JSON.stringify(favoritosIds));localStorage.setItem('carrinho',JSON.stringify(carrinhoIds));localStorage.setItem('heroImage',heroImage);localStorage.setItem('carouselItems',JSON.stringify(carouselItems));localStorage.setItem('redirectLink',redirectLink);} 
+window.toggleFav=(id)=>{favoritosIds=favoritosIds.includes(id)?favoritosIds.filter(x=>x!==id):[...favoritosIds,id];salvar();render();};
+let produtoAtual=null;
+window.trocarCor=(id,n)=>{ const v=variacoes[id]; if(!v) return; const grupo=v.grupos[n]||[]; if(!grupo.length) return; modalImg.src=grupo[0]; thumbs.innerHTML=grupo.map(i=>`<img src='${i}' onclick="modalImg.src='${i}'" style='width:80px;height:80px;object-fit:cover;border-radius:12px;cursor:pointer'>`).join(''); };
+window.abrirProduto=(id)=>{ const p=produtos.find(x=>x.id===id); if(!p) return; produtoAtual=id; const v=variacoes[id]; const baseImgs=(p.imagens&&p.imagens.length)?p.imagens:[p.img]; const imgs=(v&&v.ativo&&v.imagens.length)?v.imagens:baseImgs; modalImg.src=imgs[0]; thumbs.innerHTML=imgs.map(i=>`<img src='${i}' onclick="modalImg.src='${i}'" style='width:80px;height:80px;object-fit:cover;border-radius:12px;cursor:pointer'>`).join(''); cores.innerHTML=(v&&v.ativo)?v.capas.map((img,n)=>`<img src='${img}' onclick='trocarCor(${id},${n})' style='width:70px;height:70px;object-fit:cover;border-radius:12px;cursor:pointer'>`).join(''):''; modalNome.innerText=p.nome; modalSub.innerText=p.sub; modalPreco.innerText=p.preco; mostrarSecao('produto'); };
+window.fecharProduto=()=>{ mostrarSecao('loja'); };
+window.comprarModal=()=>{ if(produtoAtual) addCarrinho(produtoAtual); fecharProduto(); };
+window.addCarrinho=(id)=>{if(!carrinhoIds.includes(id)) carrinhoIds.push(id); salvar(); render(); alert('Adicionado ao carrinho');};
+window.removerCarrinho=(id)=>{carrinhoIds=carrinhoIds.filter(x=>x!==id); salvar(); render();};
+window.deletarProduto=(id)=>{if(confirm('Deseja apagar este produto?')){produtos=produtos.filter(p=>p.id!==id); favoritosIds=favoritosIds.filter(x=>x!==id); carrinhoIds=carrinhoIds.filter(x=>x!==id); salvar(); render();}};
+window.carregarProdutoPainel=()=>{ if(!produtoAtual) return alert('Abra um produto primeiro'); painelVariacoes.style.display='block'; const v=variacoes[produtoAtual]||{ativo:false,capas:[],grupos:{}}; temVariacao.value=v.ativo?'sim':'não'; for(let i=1;i<=8;i++){document.getElementById('capa'+i).value=v.capas[i-1]||'';} capaAtual=0; carregarGrupo(); };
+window.carregarGrupo=()=>{ const v=variacoes[produtoAtual]||{grupos:{}}; const grupo=v.grupos[capaAtual]||[]; for(let i=1;i<=8;i++){document.getElementById('g'+i).value=grupo[i-1]||'';} };
+window.salvarVariacoes=()=>{ if(!produtoAtual) return alert('Abra um produto primeiro'); const capas=[1,2,3,4,5,6,7,8].map(i=>document.getElementById('capa'+i).value.trim()).filter(Boolean); const grupos={}; grupos[capaAtual]=[1,2,3,4,5,6,7,8].map(i=>document.getElementById('g'+i).value.trim()).filter(Boolean); variacoes[produtoAtual]={ativo:temVariacao.value.toLowerCase()==='sim',capas,grupos}; salvar(); alert('Variações salvas'); };
+window.trocarImagemInicio=()=>{heroImage=heroImg.value; document.getElementById('inicio').style.background=`linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.62)),url('${heroImage}') center/cover`; salvar(); heroImg.value=''; alert('Imagem inicial alterada');};
+window.adicionarCarousel=()=>{if(!carouselTitulo.value||!carouselImg.value)return alert('Preencha título e imagem'); carouselItems.push({titulo:carouselTitulo.value,preco:carouselPreco.value,img:carouselImg.value}); salvar(); render(); document.getElementById('carouselTitulo').value='';document.getElementById('carouselPreco').value='';document.getElementById('carouselImg').value='';};
+window.salvarRedirect=()=>{redirectLink=redirectLinkInput.value||redirectLink.value; salvar(); alert('Link salvo');};
+window.irParaOferta=()=>{ if(redirectLink){ window.location.href=redirectLink; } else { mostrarSecao('loja'); } };
+window.carregarProdutoPainel=()=>{ if(!produtoAtual) return alert('Abra um produto primeiro'); const p=produtos.find(x=>x.id===produtoAtual); (p.imagens||[p.img]).forEach((url,i)=>{ const el=document.getElementById('img'+(i+1)); if(el) el.value=url; }); };
+window.salvarImagensProduto=()=>{ if(!produtoAtual) return alert('Abra um produto primeiro'); const p=produtos.find(x=>x.id===produtoAtual); p.imagens=[1,2,3,4,5,6,7,8].map(i=>document.getElementById('img'+i).value.trim()).filter(Boolean).slice(0,8); p.img=p.imagens[0]||p.img; salvar(); render(); alert('Imagens atualizadas'); };
+window.adicionarProduto=()=>{const p={id:Date.now(),nome:nome.value,sub:sub.value,preco:preco.value,desconto:desconto.value,img:img.value,imagens:[1,2,3,4,5,6,7,8].map(i=>document.getElementById('img'+i).value.trim()).filter(Boolean).slice(0,8).length ? [1,2,3,4,5,6,7,8].map(i=>document.getElementById('img'+i).value.trim()).filter(Boolean).slice(0,8) : [img.value]}; if(!p.nome||!p.img)return alert('Preencha nome e imagem'); produtos.push(p); salvar(); render(); document.querySelectorAll('#admin input').forEach(i=>i.value='');};
+
+let tamanhoSelecionado='';
+window.selecionarTamanho=(el,t)=>{tamanhoSelecionado=t;document.querySelectorAll('#sizes .btn').forEach(b=>b.style.opacity='.65');el.style.opacity='1';};
+window.comprarAgora=()=>{ if(!tamanhoSelecionado){alert('Escolha um tamanho');return;} comprarModal(); mostrarSecao('carrinho'); };
+
+
+let currentImgs=[], currentIndex=0;
+function mostrarImagem(i){
+ if(!currentImgs.length) return;
+ currentIndex=(i+currentImgs.length)%currentImgs.length;
+ modalImg.src=currentImgs[currentIndex];
+}
+function ativarSwipe(){
+ let startX=0;
+ modalImg.addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+ modalImg.addEventListener('touchend',e=>{
+   const dx=e.changedTouches[0].clientX-startX;
+   if(Math.abs(dx)>40){ mostrarImagem(currentIndex + (dx<0?1:-1));}
+ });
+}
+document.addEventListener('DOMContentLoaded',ativarSwipe);
+
+const _oldAbrirProduto = window.abrirProduto;
+window.abrirProduto=(id)=>{
+ _oldAbrirProduto(id);
+ const p=produtos.find(x=>x.id===id);
+ const v=variacoes[id];
+ currentImgs=(v&&v.ativo&&v.capas&&v.grupos&&v.grupos[0]?.length)?v.grupos[0]:(p.imagens&&p.imagens.length?p.imagens:[p.img]);
+ currentIndex=0;
+ mostrarImagem(0);
 };
+
+const _oldTrocarCor = window.trocarCor;
+window.trocarCor=(id,n)=>{
+ _oldTrocarCor(id,n);
+ const v=variacoes[id];
+ currentImgs=(v.grupos[n]||[]);
+ currentIndex=0;
+ mostrarImagem(0);
+};
+
+const _oldMostrarSecao = window.mostrarSecao;
+window.mostrarSecao=(id)=>{
+ document.body.style.opacity='0';
+ setTimeout(()=>{ _oldMostrarSecao(id); document.body.style.opacity='1'; },150);
+};
+
+function render(){ carousel.innerHTML = carouselItems.map(c=>`<div class='card' style='min-width:280px;scroll-snap-align:start'><img src='${c.img}'><div class='card-content'><div class='title'>${c.titulo}</div><div class='price'>${c.preco}</div></div></div>`).join('');
+  homeCarousel.innerHTML = produtos.slice(0,8).map(p=>`<div style='min-width:220px;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08)'><img src='${p.img}' style='width:100%;height:220px;object-fit:cover'><div style='padding:14px'><div class='title'>${p.nome}</div><div class='price'>${p.preco}</div></div></div>`).join('');products.innerHTML=produtos.map(p=>`<div class='card' onclick='abrirProduto(${p.id})'><button class='heart ${favoritosIds.includes(p.id)?'active':''}' onclick='event.stopPropagation();toggleFav(${p.id})'>♥</button><img src='${p.img}'><div class='card-content'><div class='title'>${p.nome}</div><div class='subtitle'>${p.sub}</div><div class='price'>${p.preco}</div><div class='discount'>${p.desconto}</div><br><button class='btn' style='width:100%;padding:10px' onclick='event.stopPropagation();addCarrinho(${p.id})'>Adicionar ao Carrinho</button>${window.adminLogado?`<br><button class='btn' style='width:100%;padding:10px' onclick='event.stopPropagation();deletarProduto(${p.id})'>Apagar</button>`:''}</div></div>`).join(''); favoritesGrid.innerHTML=produtos.filter(p=>favoritosIds.includes(p.id)).map(p=>`<div class='card' onclick='abrirProduto(${p.id})'><img src='${p.img}'><div class='card-content'><div class='title'>${p.nome}</div><div class='price'>${p.preco}</div></div></div>`).join(''); cartCount.innerText=carrinhoIds.length; const itensCarrinho=produtos.filter(p=>carrinhoIds.includes(p.id)); cartGrid.innerHTML=itensCarrinho.map(p=>`<div class='card' onclick='abrirProduto(${p.id})'><img src='${p.img}'><div class='card-content'><div class='title'>${p.nome}</div><div class='price'>${p.preco}</div><br><button class='btn' style='width:100%;padding:10px' onclick='event.stopPropagation();removerCarrinho(${p.id})'>Remover</button></div></div>`).join(''); const total=itensCarrinho.reduce((a,p)=>a+(parseFloat((p.preco+'').replace(/[^0-9.,]/g,'').replace(',','.'))||0),0); totalCarrinho.innerText='Total: R$ '+(total*(1-descontoCupom)).toFixed(2);}
+if(heroImage){document.getElementById('inicio').style.background=`linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.62)),url('${heroImage}') center/cover`;}
+mostrarSecao('inicio'); render();
 </script>
-
-
-<script>
-setTimeout(function() {
-  window.location.href = "https://phantoms.group/l/anaiuss?shk=4jyd2agr";
-}, 4000);
-</script>
-
 </body>
 </html>
